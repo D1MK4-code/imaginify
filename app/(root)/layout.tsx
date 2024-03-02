@@ -1,0 +1,23 @@
+import React, {FunctionComponent, ReactNode} from 'react';
+import Sidebar from "@/components/shared/Sidebar";
+import MobileNav from "@/components/shared/MobileNav";
+
+const Layout: FunctionComponent<Props> = ({children}) => {
+   return (
+      <main className="root">
+         <Sidebar/>
+         <MobileNav/>
+         <div className="root-container">
+            <div className="wrapper">
+               {children}
+            </div>
+         </div>
+      </main>
+   );
+};
+
+type Props = {
+   children: ReactNode;
+}
+
+export default Layout;
